@@ -1,0 +1,15 @@
+a {
+    margin: 0 20px 20px 20px;
+	display: flex;
+	justify-content: center;
+}
+
+h3 {
+    margin: 5px auto; 
+    text-align: center;
+}
+
+p{
+    margin: 5px auto; 
+    text-align: center;
+}
