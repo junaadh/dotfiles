@@ -293,7 +293,7 @@ xmoPP h  =  xmobarPP
 --
 -- By default, do nothing.
 myStartupHook = do
-         spawnOnce "feh --bg-fill ~/Pictures/Wallpapers/57098.jpg"
+         spawnOnce "feh --bg-fill ~/Pictures/Wallpapers/wallpaperflare.com_wallpaper.jpg"
          spawnOnce "picom --config ~/.config/picom/picom.conf &"
 
 ------------------------------------------------------------------------
