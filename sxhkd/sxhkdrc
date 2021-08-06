@@ -27,7 +27,7 @@ super + ctrl + r
 
 #filemanager
 super + Home
-	thunar
+	nemo
 
 super + shift + Home
 	alacritty -e $(echo "123456" | sudo -S thunar)
@@ -50,7 +50,7 @@ super + F8
 
 #power-menu
 super + Escape
-	~/.config/rofi/powermenu.sh
+	~/.config/polybar/scripts/powermenu.sh
 
 #quit selected tab
 super + q
