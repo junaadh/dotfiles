@@ -33,4 +33,6 @@ feh --bg-fill ~/Pictures/Wallpapers/* &
 picom -CGf &
 
 # Execute Polybar 
-polybar example
+polybar left -c ~/.config/polybar/config &
+polybar middle -c ~/.config/polybar/config &
+polybar right -c ~/.config/polybar/config
