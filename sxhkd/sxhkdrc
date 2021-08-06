@@ -8,6 +8,9 @@ super + r
                 -columns 2 -padding 50 -hide-scrollbar -terminal xfce4-terminal \
                 -show-icons -drun-icon-theme "Arc-X-D" -font "Droid Sans Regular 10"
 
+super + p
+  dmenu_run
+
 #firefox
 super + f
 	firefox
@@ -27,7 +30,7 @@ super + Home
 	thunar
 
 super + shift + Home
-	xfce4-terminal -e $(echo "123456" | sudo -S thunar)
+	alacritty -e $(echo "123456" | sudo -S thunar)
 
 #Restart bspwm
 super + F5

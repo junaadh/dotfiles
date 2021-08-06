@@ -152,7 +152,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- See also the statusBar function from Hooks.DynamicLog.
     --
     -- , ((modm              , xK_b     ), sendMessage ToggleStruts)
-
+    , ((modm              , xK_Print  ), spawn "scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Pictures/Shots/*'")
     -- Quit xmonad
     , ((modm .|. shiftMask, xK_Escape ), io (exitWith ExitSuccess))
 
