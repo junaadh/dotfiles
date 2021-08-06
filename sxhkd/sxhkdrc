@@ -72,6 +72,9 @@ super + {_,shift + }{1-9,0}
 super + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
 
+super + Print
+  scrot
+
 #Preselect the ratio
 super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
