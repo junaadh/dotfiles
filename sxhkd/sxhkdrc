@@ -1,6 +1,6 @@
 #Terminal
 super + Return
-	alacritty
+	kitty
 
 #Program launcher
 super + r
