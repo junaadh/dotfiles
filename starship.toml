@@ -1,0 +1,14 @@
+# insert blank line b/n shell prompts
+add_newline = true
+
+[username]
+style_user = "bold dimmed blue"
+show_always = false
+
+[directory]
+truncation_length = 5
+format = "[$path]($style)[$lock_symbol]($lock_style) "
+
+[python]
+format = "[$symbol$version]($style) "
+style = "bold green"
