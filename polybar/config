@@ -134,6 +134,7 @@ background      = ${colors.background}
 foreground      = ${colors.foreground}
 radius          = 6.0
 wm-restack      = bspwm
+tray-position   = left
 
 font-0          = "SauceCodePro Nerd Font:pixelsize=13;4"
 
