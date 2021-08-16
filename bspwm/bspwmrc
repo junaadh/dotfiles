@@ -35,4 +35,7 @@ picom -CGf &
 # Execute Polybar 
 polybar left -c ~/.config/polybar/config &
 polybar middle -c ~/.config/polybar/config &
-polybar right -c ~/.config/polybar/config
+polybar right -c ~/.config/polybar/config &
+
+# Dunst notification daemon
+dunst 
