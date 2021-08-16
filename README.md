@@ -20,6 +20,7 @@ YSSY      YSSP~YSSY    S*S    SSS  SSS    S*S  SSS    S*S  SSS~YSSY    SSS    S*
 
 * OS: **ArchLinux**
 * sh: bash(default)
+* terminal: kitty
 * wms:
   * xmonad
   * qtile
@@ -32,4 +33,4 @@ YSSY      YSSP~YSSY    S*S    SSS  SSS    S*S  SSS    S*S  SSS~YSSY    SSS    S*
 
 
 ### bspwm
-![Untitled collage](https://user-images.githubusercontent.com/67371703/129601575-09782a4c-f08f-4f2d-8c0b-044bf64db198.png)
+![image (2)](https://user-images.githubusercontent.com/67371703/129602809-4b7cc652-166c-44c0-adc7-64f62796702c.png)
