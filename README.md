@@ -16,4 +16,8 @@ YSSY      YSSP~YSSY    S*S    SSS  SSS    S*S  SSS    S*S  SSS~YSSY    SSS    S*
                        Y                  Y           Y                       Y   
 ```
 
-Dot Files
+# Dot Files
+
+* OS: **ArchLinux
+* sh: bash(default)
+* wms: xmonad | qtile | bspwm {modified configs}**
