@@ -16,8 +16,20 @@ YSSY      YSSP~YSSY    S*S    SSS  SSS    S*S  SSS    S*S  SSS~YSSY    SSS    S*
                        Y                  Y           Y                       Y   
 ```
 
-# Dot Files
+## Dot Files
 
-* OS: **ArchLinux
+* OS: **ArchLinux**
 * sh: bash(default)
-* wms: xmonad | qtile | bspwm {modified configs}**
+* wms:
+  * xmonad
+  * qtile
+  * bspwm
+* de: None at the moment
+* compositor: picom
+* notification daemon: dunst
+* background tiling: feh
+* display manager: lightdm
+
+
+### bspwm
+![Untitled collage](https://user-images.githubusercontent.com/67371703/129601575-09782a4c-f08f-4f2d-8c0b-044bf64db198.png)
