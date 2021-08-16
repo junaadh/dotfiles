@@ -1,3 +1,4 @@
+# Dot Files
 
 ```
     .S   .S       S.    .S_sSSs     .S_SSSs     .S_SSSs     .S_sSSs     .S    S.   
@@ -16,7 +17,7 @@ YSSY      YSSP~YSSY    S*S    SSS  SSS    S*S  SSS    S*S  SSS~YSSY    SSS    S*
                        Y                  Y           Y                       Y   
 ```
 
-## Dot Files
+## Description
 
 * OS: **ArchLinux**
 * sh: bash(default)
