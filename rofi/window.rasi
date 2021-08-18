@@ -1,0 +1,16 @@
+configuration {
+        show-icons: true;
+        disable-history: true;
+        fullscreen: false;
+        hide-scrollbar: true;
+}
+
+@import "nord.rasi"
+
+inputbar {
+        enabled: false;
+}
+
+listview {
+        cycle: true;
+}

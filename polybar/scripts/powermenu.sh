@@ -13,15 +13,15 @@ $logout
 $sleep
 $reboot
 $shutdown" | rofi -dmenu\
-                  -i\
-                  -p "Power"\
+                  -p "PowerMenu"\
                   -config "~/.config/rofi/config.rasi"\
-                  -font "Symbols Nerd Font 12"\
+                  -font "SauceCodePro Nerd Font 12"\
                   -width "15"\
                   -lines 5\
                   -line-margin 3\
                   -line-padding 10\
-                  -scrollbar-width "0" )
+                  -scrollbar-width "0" 
+                  -inputbar disabled )
 
 # Do something based on selected option
 if [ "$selected_option" == "$lock" ]
