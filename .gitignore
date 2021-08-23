@@ -10,3 +10,6 @@ QtProject.conf
 git/
 xmonad/xmonad.hi
 xmonad/xmonad.o
+pavucontrol.ini
+environment.d/
+gtk-3.0/
