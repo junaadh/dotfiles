@@ -14,13 +14,13 @@ inputbar {
 entry {
   padding: 16px;
 	text-color: @snow-1;
-	font: "SauceCodePro Nerd Font 14";
+	font: "FiraCode Nerd Font 14";
 }
 
 /* The area to the left of the text search box */
 prompt {
 	enabled: true;
-	font: "SauceCodePro Nerd Font 13";
+	font: "FiraCode Nerd Font 13";
 	padding: 18 10 15 15;
 	text-color: @polar-2;
 }
@@ -37,7 +37,7 @@ listview {
 }
 
 element {
-	font: "SourceCodePro Nerd Font 20";
+	font: "FiraCode Nerd Font 20";
   border: 0 0 1px 0;
   padding: 12px;
 	spacing: 10px;

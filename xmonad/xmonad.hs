@@ -93,8 +93,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch thunar
     , ((modm,               xK_Home  ), spawn "nemo")
 
--- launch thunar-admin
---  , ((modm .|. shiftMask, xK_Home  ), spawn "$HOME/Scripts/thunar-admin.sh")
+    -- launch thunar-admin
+    , ((modm,               xK_F1    ), spawn "$HOME/.config/rofi/launcher.sh")
 
     -- launch firefox
     , ((modm,               xK_f     ), spawn "firefox")
@@ -293,8 +293,11 @@ xmoPP h  =  xmobarPP
 --
 -- By default, do nothing.
 myStartupHook = do
-         spawnOnce "feh --bg-fill ~/Pictures/Wallpapers/wallpaperflare.com_wallpaper.jpg"
+         spawnOnce "xrandr --output LVDS-1 --off &"
+         spawnOnce "export XMONAD_CONFIG_DIR=/home/junko/.config/xmonad &"
+         spawnOnce "feh --bg-fill ~/Pictures/Wallpapers/wallpaperflare.com_wallpaper.jpg &"
          spawnOnce "picom --config ~/.config/picom/picom.conf &"
+         spawnOnce "dunst &"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.

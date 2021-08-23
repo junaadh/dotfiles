@@ -6,7 +6,7 @@ configuration {
         display-drun: "  ";
         display-window: "  ";
         drun-display-format: "{icon} {name}";
-        font: "SauceCodePro Nerd Font 12";
+        font: "FiraCode Nerd Font 12";
         modi: "window, run, drun";
 }
 

@@ -1,4 +1,3 @@
-#!/bin/env bash
 
 # Options for powermenu
 lock="    Lock"
@@ -20,8 +19,7 @@ $shutdown" | rofi -dmenu\
                   -lines 5\
                   -line-margin 3\
                   -line-padding 10\
-                  -scrollbar-width "0" 
-                  -inputbar disabled )
+		  -scrollbar-width "0") 
 
 # Do something based on selected option
 if [ "$selected_option" == "$lock" ]
