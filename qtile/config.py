@@ -6,7 +6,7 @@ from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
 mod = "mod4"
-myTerm = "alacritty"
+myTerm = "kitty"
 myFile = "nemo"
 myBrowser = "firefox"
 
@@ -57,6 +57,7 @@ keys = [
     Key([mod, "shift"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "p", lazy.spawncmd(),
         desc="Spawn a command using a prompt widget"),
+    Key([mod], "F1", lazy.spawn("$HOME/.config/rofi/launcher.sh")),
 
     Key([mod], "Home", lazy.spawn(myFile)),
     Key([mod], "f", lazy.spawn(myBrowser))

@@ -295,7 +295,7 @@ xmoPP h  =  xmobarPP
 myStartupHook = do
          spawnOnce "xrandr --output LVDS-1 --off &"
          spawnOnce "export XMONAD_CONFIG_DIR=/home/junko/.config/xmonad &"
-         spawnOnce "feh --bg-fill ~/Pictures/Wallpapers/wallpaperflare.com_wallpaper.jpg &"
+         spawnOnce "feh --bg-fill ~/Pictures/Wallpapers/* &"
          spawnOnce "picom --config ~/.config/picom/picom.conf &"
          spawnOnce "dunst &"
 
