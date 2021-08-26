@@ -30,7 +30,7 @@ super + ctrl + r
 
 #filemanager
 super + Home
-	nemo
+	thunar
 
 super + shift + Home
 	alacritty -e $(echo "123456" | sudo -S thunar)

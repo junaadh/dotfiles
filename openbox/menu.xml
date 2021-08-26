@@ -3,14 +3,6 @@
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
 
 <menu id="apps-accessories-menu" label="Accessories">
-  <item label="Calculator">
-    <action name="Execute">
-      <command>gnome-calculator</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
   <item label="Character Map">
     <action name="Execute">
       <command>gnome-character-map</command>
@@ -30,15 +22,6 @@
 </menu>
 
 <menu id="apps-editors-menu" label="Editors">
-  <item label="GVim">
-    <action name="Execute">
-      <command>gvim</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-        <wmclass>GVim</wmclass>
-      </startupnotify>
-    </action>
-  </item>
   <item label="Emacs">
     <action name="Execute">
       <command>emacs</command>
@@ -48,30 +31,11 @@
       </startupnotify>
     </action>
   </item>
-  <item label="GEdit">
+  <item label="Vscode">
     <action name="Execute">
-      <command>gedit</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
+      <command>vscodium</command>
     </action>
-  </item>
-  <item label="Kate">
-    <action name="Execute">
-      <command>kate</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="Kwrite">
-    <action name="Execute">
-      <command>kwrite</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
+  </item>  
 </menu>
 
 <menu id="apps-term-menu" label="Terminals">
@@ -88,6 +52,11 @@
       </startupnotify>
     </action>
   </item>
+  <item name="Kitty">
+    <action name="Execute">
+      <command>kitty</command>
+    </action>
+  </item>
 </menu>
 
 <menu id="apps-net-menu" label="Internet">
@@ -102,101 +71,20 @@
   </item>
   <item label="Google Chrome">
     <action name="Execute">
-      <command>google-chrome-stable</command>
+      <command>google-chrome-beta</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
     </action>
   </item>
-  <item label="Konqueror">
+  <item name="Telegram">
     <action name="Execute">
-      <command>konqueror</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="Epiphany">
-    <action name="Execute">
-      <command>epiphany</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="Pidgin Instant Messenger">
-    <action name="Execute">
-      <command>pidgin</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="Kopete Instant Messenger">
-    <action name="Execute">
-      <command>kopete</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="XChat">
-    <action name="Execute">
-      <command>xchat</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-</menu>
-
-<menu id="apps-office-menu" label="Office">
-  <item label="OpenOffice Base">
-    <action name="Execute">
-      <command>ooffice -base</command>
-    </action>
-  </item>
-  <item label="OpenOffice Calc">
-    <action name="Execute">
-      <command>ooffice -calc</command>
-    </action>
-  </item>
-  <item label="OpenOffice Draw">
-    <action name="Execute">
-      <command>ooffice -draw</command>
-    </action>
-  </item>
-  <item label="OpenOffice Impress">
-    <action name="Execute">
-      <command>ooffice -impress</command>
-    </action>
-  </item>
-  <item label="OpenOffice Math">
-    <action name="Execute">
-      <command>ooffice -math</command>
-    </action>
-  </item>
-  <item label="OpenOffice Printer Administration">
-    <action name="Execute">
-      <command>ooffice-printeradmin</command>
-    </action>
-  </item>
-  <item label="OpenOffice Writer">
-    <action name="Execute">
-      <command>ooffice -writer</command>
+      <command>Telegram-desktop</command>
     </action>
   </item>
 </menu>
 
 <menu id="apps-multimedia-menu" label="Multimedia">
-  <item label="Amarok">
-    <action name="Execute">
-      <command>amarok</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
   <item label="Rhythmbox">
     <action name="Execute">
       <command>rhythmbox</command>
@@ -205,42 +93,18 @@
       </startupnotify>
     </action>
   </item>
-  <item label="K3b">
+  <item label="Vlc">
     <action name="Execute">
-      <command>k3b</command>
+      <command>vlc</command>
       <startupnotify>
         <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="MPlayer">
-    <action name="Execute">
-      <command>gmplayer</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-        <wmclass>MPlayer</wmclass>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="Totem">
-    <action name="Execute">
-      <command>totem</command>
-      <startupnotify>
-        <enabled>yes</enabled>
+        <wmclass>Vlc</wmclass>
       </startupnotify>
     </action>
   </item>
 </menu>
 
 <menu id="apps-fileman-menu" label="File Managers">
-  <item label="Nautilus">
-    <action name="Execute">
-      <command>nautilus --no-desktop --browser</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
   <item label="Thunar">
     <action name="Execute">
       <command>Thunar</command>
@@ -249,33 +113,9 @@
       </startupnotify>
     </action>
   </item>
-  <item label="KDE File Manager">
-    <action name="Execute">
-      <command>kfmclient openURL ~</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="Rox">
-    <action name="Execute">
-      <command>rox</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-        <wmclass>ROX-Filer</wmclass>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="PCMan File Manager">
-    <action name="Execute">
-      <command>pcmanfm</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
 </menu>
 
+<!--
 <menu id="apps-graphics-menu" label="Graphics">
   <item label="Gimp">
     <action name="Execute">
@@ -310,29 +150,12 @@
     </action>
   </item>
 </menu>
+-->-
 
 <menu id="system-menu" label="System">
   <item label="Openbox Configuration Manager">
     <action name="Execute">
       <command>obconf</command>
-      <startupnotify><enabled>yes</enabled></startupnotify>
-    </action>
-  </item>
-  <item label="Gnome Control Center">
-    <action name="Execute">
-      <command>gnome-control-center</command>
-      <startupnotify><enabled>yes</enabled></startupnotify>
-    </action>
-  </item>
-  <item label="KDE Control Center">
-    <action name="Execute">
-      <command>kcontrol</command>
-      <startupnotify><enabled>yes</enabled></startupnotify>
-    </action>
-  </item>
-  <item label="Xfce Settings">
-    <action name="Execute">
-      <command>xfce-setting-show</command>
       <startupnotify><enabled>yes</enabled></startupnotify>
     </action>
   </item>
@@ -354,10 +177,9 @@
 <menu id="root-menu" label="Openbox 3">
   <separator label="Applications" />
   <menu id="apps-accessories-menu"/>
-  <menu id="apps-editors-menu"/>
-  <menu id="apps-graphics-menu"/>
+  <menu id="apps-editors-menu"/> 
+  <!--  <menu id="apps-graphics-menu"/> -->
   <menu id="apps-net-menu"/>
-  <menu id="apps-office-menu"/>
   <menu id="apps-multimedia-menu"/>
   <menu id="apps-term-menu"/>
   <menu id="apps-fileman-menu"/>

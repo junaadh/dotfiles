@@ -14,3 +14,4 @@ pavucontrol.ini
 environment.d/
 gtk-3.0/
 qtile/__pycache__/
+google-chrome-beta/
