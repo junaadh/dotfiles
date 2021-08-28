@@ -38,7 +38,7 @@ import qualified Data.Map        as M
 -- Set default terminal
 
 myTerm :: String
-myTerm  = "alacritty"
+myTerm  = "kitty"
 
 -- Whether focus follows the mouse pointer.
 

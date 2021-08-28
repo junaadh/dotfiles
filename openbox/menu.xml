@@ -52,7 +52,7 @@
       </startupnotify>
     </action>
   </item>
-  <item name="Kitty">
+  <item label="Kitty">
     <action name="Execute">
       <command>kitty</command>
     </action>
@@ -77,9 +77,9 @@
       </startupnotify>
     </action>
   </item>
-  <item name="Telegram">
+  <item label="Telegram">
     <action name="Execute">
-      <command>Telegram-desktop</command>
+      <command>telegram-desktop</command>
     </action>
   </item>
 </menu>

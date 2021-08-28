@@ -1,0 +1,69 @@
+[2021-08-28 19:46:39.868] [exthost] [info] extension host started
+[2021-08-28 19:46:39.969] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2021-08-28 19:46:39.969] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/debug-auto-launch/dist/extension
+[2021-08-28 19:46:39.996] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2021-08-28 19:46:39.997] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/git/dist/main
+[2021-08-28 19:46:40.316] [exthost] [info] ExtensionService#_doActivateExtension vscode.github {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2021-08-28 19:46:40.317] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/github/dist/extension.js
+[2021-08-28 19:46:40.339] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.js-debug {"startup":false,"extensionId":{"value":"ms-vscode.js-debug","_lower":"ms-vscode.js-debug"},"activationEvent":"onCommand:extension.js-debug.clearAutoAttachVariables"}
+[2021-08-28 19:46:40.339] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/ms-vscode.js-debug/src/extension.js
+[2021-08-28 19:46:40.962] [exthost] [info] eager extensions activated
+[2021-08-28 19:46:40.995] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":false,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"onStartupFinished"}
+[2021-08-28 19:46:40.995] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/emmet/dist/node/emmetNodeMain
+[2021-08-28 19:46:41.009] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":false,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"onStartupFinished"}
+[2021-08-28 19:46:41.009] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/merge-conflict/dist/mergeConflictMain
+[2021-08-28 19:46:41.015] [exthost] [info] ExtensionService#_doActivateExtension vscode.testing-editor-contributions {"startup":false,"extensionId":{"value":"vscode.testing-editor-contributions","_lower":"vscode.testing-editor-contributions"},"activationEvent":"onStartupFinished"}
+[2021-08-28 19:46:41.015] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/testing-editor-contributions/dist/extension.js
+[2021-08-28 19:48:08.554] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"extensionId":{"value":"vscode.configuration-editing","_lower":"vscode.configuration-editing"},"activationEvent":"onLanguage:json"}
+[2021-08-28 19:48:08.554] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/configuration-editing/dist/configurationEditingMain
+[2021-08-28 19:48:08.604] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing {"startup":false,"extensionId":{"value":"vscode.extension-editing","_lower":"vscode.extension-editing"},"activationEvent":"onLanguage:json"}
+[2021-08-28 19:48:08.604] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/extension-editing/dist/extensionEditingMain
+[2021-08-28 19:48:08.730] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features {"startup":false,"extensionId":{"value":"vscode.json-language-features","_lower":"vscode.json-language-features"},"activationEvent":"onLanguage:json"}
+[2021-08-28 19:48:08.733] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/json-language-features/client/dist/node/jsonClientMain
+[2021-08-28 19:48:08.842] [exthost] [info] ExtensionService#_doActivateExtension vscode.npm {"startup":false,"extensionId":{"value":"vscode.npm","_lower":"vscode.npm"},"activationEvent":"onLanguage:json"}
+[2021-08-28 19:48:08.842] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/npm/dist/npmMain
+[2021-08-28 19:48:13.856] [exthost] [info] ExtensionService#_doActivateExtension RobbOwen.synthwave-vscode {"startup":false,"extensionId":{"value":"RobbOwen.synthwave-vscode","_lower":"robbowen.synthwave-vscode"},"activationEvent":"*"}
+[2021-08-28 19:48:13.856] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/junko/.vscode-oss/extensions/robbowen.synthwave-vscode-0.1.8/src/extension.js
+[2021-08-28 19:48:23.595] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"extensionId":{"value":"vscode.typescript-language-features","_lower":"vscode.typescript-language-features"},"activationEvent":"onLanguage:jsonc"}
+[2021-08-28 19:48:23.595] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/typescript-language-features/dist/extension
+[2021-08-28 19:49:22.225] [exthost] [info] ExtensionService#_doActivateExtension vscode.html-language-features {"startup":false,"extensionId":{"value":"vscode.html-language-features","_lower":"vscode.html-language-features"},"activationEvent":"onLanguage:html"}
+[2021-08-28 19:49:22.225] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/html-language-features/client/dist/node/htmlClientMain
+[2021-08-28 19:49:22.487] [exthost] [info] ExtensionService#_doActivateExtension vscode.css-language-features {"startup":false,"extensionId":{"value":"vscode.css-language-features","_lower":"vscode.css-language-features"},"activationEvent":"onLanguage:css"}
+[2021-08-28 19:49:22.487] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/css-language-features/client/dist/node/cssClientMain
+[2021-08-28 19:49:24.857] [exthost] [info] ExtensionService#_doActivateExtension ecmel.vscode-html-css {"startup":false,"extensionId":{"value":"ecmel.vscode-html-css","_lower":"ecmel.vscode-html-css"},"activationEvent":"*"}
+[2021-08-28 19:49:24.857] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/junko/.vscode-oss/extensions/ecmel.vscode-html-css-1.9.1/dist/extension.js
+[2021-08-28 19:51:47.716] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication {"startup":false,"extensionId":{"value":"vscode.github-authentication","_lower":"vscode.github-authentication"},"activationEvent":"onAuthenticationRequest:github"}
+[2021-08-28 19:51:47.716] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/github-authentication/dist/extension.js
+[2021-08-28 19:54:13.910] [exthost] [info] extension host terminating: renderer closed the socket
+[2021-08-28 19:54:14.953] [exthost] [info] exiting with code 0
+[2021-08-28 19:54:18.795] [exthost] [info] extension host started
+[2021-08-28 19:54:18.869] [exthost] [info] Lock '/home/junko/.config/Code - OSS/User/workspaceStorage/a76bedf1bd0d6423e7a753adef557302/vscode.lock': Lock acquired.
+[2021-08-28 19:54:19.071] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2021-08-28 19:54:19.072] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/debug-auto-launch/dist/extension
+[2021-08-28 19:54:19.082] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2021-08-28 19:54:19.083] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/git/dist/main
+[2021-08-28 19:54:19.769] [exthost] [info] ExtensionService#_doActivateExtension vscode.github {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2021-08-28 19:54:19.769] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/github/dist/extension.js
+[2021-08-28 19:54:20.131] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.js-debug {"startup":false,"extensionId":{"value":"ms-vscode.js-debug","_lower":"ms-vscode.js-debug"},"activationEvent":"onCommand:extension.js-debug.clearAutoAttachVariables"}
+[2021-08-28 19:54:20.131] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/ms-vscode.js-debug/src/extension.js
+[2021-08-28 19:54:20.698] [exthost] [info] eager extensions activated
+[2021-08-28 19:54:20.726] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":false,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"onStartupFinished"}
+[2021-08-28 19:54:20.728] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/emmet/dist/node/emmetNodeMain
+[2021-08-28 19:54:20.758] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":false,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"onStartupFinished"}
+[2021-08-28 19:54:20.759] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/merge-conflict/dist/mergeConflictMain
+[2021-08-28 19:54:20.766] [exthost] [info] ExtensionService#_doActivateExtension vscode.testing-editor-contributions {"startup":false,"extensionId":{"value":"vscode.testing-editor-contributions","_lower":"vscode.testing-editor-contributions"},"activationEvent":"onStartupFinished"}
+[2021-08-28 19:54:20.766] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/testing-editor-contributions/dist/extension.js
+[2021-08-28 19:54:21.266] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 703
+[2021-08-28 19:54:23.371] [exthost] [info] ExtensionService#_doActivateExtension ecmel.vscode-html-css {"startup":false,"extensionId":{"value":"ecmel.vscode-html-css","_lower":"ecmel.vscode-html-css"},"activationEvent":"*"}
+[2021-08-28 19:54:23.371] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/junko/.vscode-oss/extensions/ecmel.vscode-html-css-1.9.1/dist/extension.js
+[2021-08-28 19:54:23.459] [exthost] [info] ExtensionService#_doActivateExtension RobbOwen.synthwave-vscode {"startup":false,"extensionId":{"value":"RobbOwen.synthwave-vscode","_lower":"robbowen.synthwave-vscode"},"activationEvent":"*"}
+[2021-08-28 19:54:23.459] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/junko/.vscode-oss/extensions/robbowen.synthwave-vscode-0.1.8/src/extension.js
+[2021-08-28 19:54:36.500] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 737
+[2021-08-28 19:54:41.649] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 737
+[2021-08-28 19:54:46.804] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 737
+[2021-08-28 19:54:51.969] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 737
+[2021-08-28 19:54:57.135] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 737
+[2021-08-28 19:55:02.313] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 737
+[2021-08-28 19:55:15.164] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 737
+[2021-08-28 19:56:00.338] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 994
+[2021-08-28 19:56:05.495] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 802

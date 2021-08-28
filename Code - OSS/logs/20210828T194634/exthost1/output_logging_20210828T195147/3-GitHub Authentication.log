@@ -1,0 +1,9 @@
+[Info  - 14:51:52.201] Logging in for the following scopes: repo workflow
+[Trace  - 14:53:09.114] Handling Uri...
+[Info  - 14:53:09.114] Exchanging code for token...
+[Info  - 14:53:10.223] Token exchange success!
+[Info  - 14:53:10.225] Getting user info...
+[Info  - 14:53:10.826] Got account info!
+[Info  - 14:53:10.975] Login success!
+[Trace  - 14:53:11.51] Token acquired from secret storage.
+[Trace  - 14:53:11.51] Read the following session from the keychain with the following scopes: repo,workflow

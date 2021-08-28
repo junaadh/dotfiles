@@ -1,0 +1,3 @@
+Looking for git in: git
+Using git 2.33.0 from git
+> git clone https://github.com/junaadh/.config.git /home/junko/.config/.config --progress
