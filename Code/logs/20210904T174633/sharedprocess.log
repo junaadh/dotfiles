@@ -1,0 +1,18 @@
+[2021-09-04 17:46:44.085] [sharedprocess] [warning] No ptyHost heartbeat after 6 seconds
+[2021-09-04 17:46:48.326] [sharedprocess] [info] [logs cleanup]: Starting to clean up old logs.
+[2021-09-04 17:47:08.284] [sharedprocess] [info] [code cache cleanup]: Starting to clean up old code cache folders.
+[2021-09-04 17:47:08.316] [sharedprocess] [info] [storage cleanup]: Starting to clean up storage folders.
+[2021-09-04 17:47:18.288] [sharedprocess] [info] [language pack cache cleanup]: Starting to clean up unused language packs.
+[2021-09-04 19:19:38.046] [sharedprocess] [info] Installing extension: esbenp.prettier-vscode
+[2021-09-04 19:19:41.991] [sharedprocess] [info] Downloaded extension: esbenp.prettier-vscode /home/junko/.config/Code/CachedExtensionVSIXs/esbenp.prettier-vscode-8.1.0
+[2021-09-04 19:19:42.962] [sharedprocess] [info] Extracted extension to /home/junko/.vscode/extensions/.b91483df-bbe5-4d20-84c1-c08827e5dfab: esbenp.prettier-vscode
+[2021-09-04 19:19:43.041] [sharedprocess] [info] Renamed to /home/junko/.vscode/extensions/esbenp.prettier-vscode-8.1.0
+[2021-09-04 19:19:43.047] [sharedprocess] [info] Extracting completed. esbenp.prettier-vscode
+[2021-09-04 19:19:43.090] [sharedprocess] [info] Extension installed successfully: esbenp.prettier-vscode
+[2021-09-04 19:19:54.551] [sharedprocess] [info] Installing extension: ritwickdey.liveserver
+[2021-09-04 19:19:58.432] [sharedprocess] [info] Downloaded extension: ritwickdey.liveserver /home/junko/.config/Code/CachedExtensionVSIXs/ritwickdey.liveserver-5.6.1
+[2021-09-04 19:20:07.320] [sharedprocess] [info] Extracted extension to /home/junko/.vscode/extensions/.015cdb9a-dd6b-4453-a3be-6d0db7c4baf8: ritwickdey.liveserver
+[2021-09-04 19:20:07.407] [sharedprocess] [info] Renamed to /home/junko/.vscode/extensions/ritwickdey.liveserver-5.6.1
+[2021-09-04 19:20:07.410] [sharedprocess] [info] Extracting completed. ritwickdey.liveserver
+[2021-09-04 19:20:07.467] [sharedprocess] [info] Extension installed successfully: ritwickdey.liveserver
+[2021-09-04 19:29:01.307] [sharedprocess] [warning] No ptyHost heartbeat after 6 seconds

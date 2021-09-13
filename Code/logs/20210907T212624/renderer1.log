@@ -1,0 +1,8 @@
+[2021-09-07 21:26:28.914] [renderer1] [error] Error: Unable to read file '/home/junko/Documents/api/dist/myBundle.3a4ac4278d52c7768ea9.js' (Error: Unable to resolve non-existing file '/home/junko/Documents/api/dist/myBundle.3a4ac4278d52c7768ea9.js')
+    at i.handleSetInputError (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2385:172185)
+    at i.handleSetInputError (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2385:176202)
+    at i.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2385:171879)
+    at async h.doSetInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2385:33390)
+    at async h.doOpenEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2385:31790)
+    at async h.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2385:31438)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2584:16931

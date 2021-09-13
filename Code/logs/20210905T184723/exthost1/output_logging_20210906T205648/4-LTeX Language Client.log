@@ -1,0 +1,52 @@
+2021-09-06T15:56:48.251Z Info: Setting LTeX UI language to 'en-us'.
+2021-09-06T15:56:48.251Z Info: Loading i18n messages...
+2021-09-06T15:56:48.290Z Info: Loading default i18n messages...
+2021-09-06T15:56:48.293Z Info: 
+2021-09-06T15:56:48.294Z Info: ltex.ltex-ls.path not set.
+2021-09-06T15:56:48.294Z Info: Searching for ltex-ls in '/home/junko/.vscode/extensions/valentjn.vscode-ltex-11.0.0/lib'...
+2021-09-06T15:56:48.296Z Info: ltex-ls found in '/home/junko/.vscode/extensions/valentjn.vscode-ltex-11.0.0/lib/ltex-ls-13.0.0'.
+2021-09-06T15:56:48.296Z Info: 
+2021-09-06T15:56:48.296Z Info: ltex.java.path not set.
+2021-09-06T15:56:48.297Z Info: Using ltex-ls from '/home/junko/.vscode/extensions/valentjn.vscode-ltex-11.0.0/lib/ltex-ls-13.0.0'.
+2021-09-06T15:56:48.297Z Info: Using Java from PATH or JAVA_HOME (may fail if not installed).
+2021-09-06T15:56:48.372Z Info: Testing ltex-ls...
+2021-09-06T15:56:48.372Z Info:   Command: "/home/junko/.vscode/extensions/valentjn.vscode-ltex-11.0.0/lib/ltex-ls-13.0.0/bin/ltex-ls"
+2021-09-06T15:56:48.372Z Info:   Arguments: ["--version"]
+2021-09-06T15:56:48.372Z Info:   env['JAVA_HOME']: undefined
+2021-09-06T15:56:48.372Z Info:   env['JAVA_OPTS']: "-Xms64m -Xmx512m"
+2021-09-06T15:56:48.501Z Error: Test failed.
+2021-09-06T15:56:48.501Z Info: ltex-ls terminated with non-zero exit code 1.
+2021-09-06T15:56:48.501Z Info: stdout of ltex-ls:
+2021-09-06T15:56:48.501Z Info: 
+2021-09-06T15:56:48.501Z Info: stderr of ltex-ls:
+2021-09-06T15:56:48.501Z Info: which: no java in (/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl)
+2021-09-06T15:56:48.501Z Info: Error: JAVA_HOME is not defined correctly.
+2021-09-06T15:56:48.501Z Info:   We cannot execute 
+2021-09-06T15:56:48.501Z Info: 
+2021-09-06T15:56:48.513Z Info: 
+2021-09-06T15:56:48.513Z Info: Searching for Java in '/home/junko/.vscode/extensions/valentjn.vscode-ltex-11.0.0/lib'...
+2021-09-06T15:56:48.514Z Info: Java found in '/home/junko/.vscode/extensions/valentjn.vscode-ltex-11.0.0/lib/jdk-11.0.11+9-jre'.
+2021-09-06T15:56:48.514Z Info: Using ltex-ls from '/home/junko/.vscode/extensions/valentjn.vscode-ltex-11.0.0/lib/ltex-ls-13.0.0'.
+2021-09-06T15:56:48.514Z Info: Using Java from '/home/junko/.vscode/extensions/valentjn.vscode-ltex-11.0.0/lib/jdk-11.0.11+9-jre'.
+2021-09-06T15:56:48.540Z Info: Testing ltex-ls...
+2021-09-06T15:56:48.540Z Info:   Command: "/home/junko/.vscode/extensions/valentjn.vscode-ltex-11.0.0/lib/ltex-ls-13.0.0/bin/ltex-ls"
+2021-09-06T15:56:48.540Z Info:   Arguments: ["--version"]
+2021-09-06T15:56:48.541Z Info:   env['JAVA_HOME']: "/home/junko/.vscode/extensions/valentjn.vscode-ltex-11.0.0/lib/jdk-11.0.11+9-jre"
+2021-09-06T15:56:48.541Z Info:   env['JAVA_OPTS']: "-Xms64m -Xmx512m"
+2021-09-06T15:56:53.657Z Info: Test successful!
+2021-09-06T15:56:53.657Z Info: 
+2021-09-06T15:56:53.674Z Info: Starting ltex-ls...
+2021-09-06T15:56:53.674Z Info:   Command: "/home/junko/.vscode/extensions/valentjn.vscode-ltex-11.0.0/lib/ltex-ls-13.0.0/bin/ltex-ls"
+2021-09-06T15:56:53.674Z Info:   Arguments: []
+2021-09-06T15:56:53.674Z Info:   env['JAVA_HOME']: "/home/junko/.vscode/extensions/valentjn.vscode-ltex-11.0.0/lib/jdk-11.0.11+9-jre"
+2021-09-06T15:56:53.674Z Info:   env['JAVA_OPTS']: "-Xms64m -Xmx512m"
+2021-09-06T15:56:53.674Z Info: 
+2021-09-06T15:58:21.513Z Info: Created directory '/home/junko/Documents/api/.vscode' for external setting file '/home/junko/Documents/api/.vscode/ltex.hiddenFalsePositives.en-US.txt' as it didn't exist.
+2021-09-06T15:58:21.514Z Info: Created external setting file '/home/junko/Documents/api/.vscode/ltex.hiddenFalsePositives.en-US.txt' as it didn't exist.
+2021-09-06T15:58:21.514Z Info: Read external setting file '/home/junko/Documents/api/.vscode/ltex.hiddenFalsePositives.en-US.txt'.
+2021-09-06T15:58:21.515Z Info: Appended new entries to external setting file '/home/junko/Documents/api/.vscode/ltex.hiddenFalsePositives.en-US.txt'.
+2021-09-06T15:58:21.578Z Info: Started watching external setting file '/home/junko/Documents/api/.vscode/ltex.hiddenFalsePositives.en-US.txt'.
+2021-09-06T15:59:02.502Z Info: Created external setting file '/home/junko/Documents/api/.vscode/ltex.disabledRules.en-US.txt' as it didn't exist.
+2021-09-06T15:59:02.503Z Info: Read external setting file '/home/junko/Documents/api/.vscode/ltex.disabledRules.en-US.txt'.
+2021-09-06T15:59:02.504Z Info: Appended new entries to external setting file '/home/junko/Documents/api/.vscode/ltex.disabledRules.en-US.txt'.
+2021-09-06T15:59:02.561Z Info: Started watching external setting file '/home/junko/Documents/api/.vscode/ltex.disabledRules.en-US.txt'.

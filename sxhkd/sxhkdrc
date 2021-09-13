@@ -76,7 +76,7 @@ super + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
 
 super + Print
-  scrot
+  scrot ~/Pictures/Screenshots/%b%d::%H%M%S.png
 
 #Preselect the ratio
 super + ctrl + {1-9}
