@@ -12,6 +12,12 @@
                 "folderUri": "file:///home/junko/Documents/webpack"
             },
             {
+                "fileUri": "file:///home/junko/Documents/Notes/Bio/5B.org"
+            },
+            {
+                "fileUri": "file:///home/junko/.cache/.fr-Q8bJJa/package/native-modules.js"
+            },
+            {
                 "fileUri": "file:///home/junko/Documents/api/package.json"
             },
             {
@@ -24,13 +30,13 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/home/junko/.config/Code/Backups/1631032936525",
+            "backupPath": "/home/junko/.config/Code/Backups/1632932343815",
             "uiState": {
                 "mode": 1,
-                "x": 10,
-                "y": 39,
-                "width": 1346,
-                "height": 719
+                "x": 690,
+                "y": 31,
+                "width": 669,
+                "height": 730
             }
         },
         "openedWindows": []
@@ -110,6 +116,17 @@
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/junko/.cache/.fr-Q8bJJa/package/native-modules.js",
+                                        "path": "/home/junko/.cache/.fr-Q8bJJa/package/native-modules.js",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/.cache/.fr-Q8bJJa/package/native-modules.js"
                                 },
                                 {
                                     "id": "openRecentFile",
@@ -252,13 +269,6 @@
                                 {
                                     "id": "workbench.action.selectProductIconTheme",
                                     "label": "&&Product Icon Theme"
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
-                                },
-                                {
-                                    "id": "workbench.userDataSync.actions.turnOn",
-                                    "label": "Turn on Settings Sync..."
                                 }
                             ]
                         }
@@ -635,8 +645,7 @@
                     },
                     {
                         "id": "editor.action.toggleWordWrap",
-                        "label": "&&Word Wrap",
-                        "enabled": false
+                        "label": "&&Word Wrap"
                     },
                     {
                         "id": "editor.action.toggleMinimap",

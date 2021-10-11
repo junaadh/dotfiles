@@ -1,3 +1,4 @@
+#!/bin/bash
 
 # Options for powermenu
 lock="    Lock"
@@ -14,7 +15,7 @@ $reboot
 $shutdown" | rofi -dmenu\
                   -p "PowerMenu"\
                   -config "~/.config/rofi/config.rasi"\
-                  -font "SauceCodePro Nerd Font 12"\
+                  -font "FiraCode Nerd Font Mono 12"\
                   -width "15"\
                   -lines 5\
                   -line-margin 3\

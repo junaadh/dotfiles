@@ -1,13 +1,18 @@
+import os
+import subprocess
+
 from typing import List  # noqa: F401
 
-from libqtile import bar, layout, widget
+from libqtile import hook, bar, layout, widget, extension
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
+home = os.path.expanduser('~')
+
 mod = "mod4"
 myTerm = "kitty"
-myFile = "nemo"
+myFile = "thunar"
 myBrowser = "firefox"
 
 
@@ -17,7 +22,7 @@ keys = [
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
-    Key([mod], "space", lazy.layout.next(),
+    Key([mod, "shift"], "space", lazy.layout.next(),
         desc="Move window focus to other window"),
 
     # Move windows between left/right columns or move up/down in current stack.
@@ -57,22 +62,27 @@ keys = [
     Key([mod, "shift"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "p", lazy.spawncmd(),
         desc="Spawn a command using a prompt widget"),
-    Key([mod], "F1", lazy.spawn("$HOME/.config/rofi/launcher.sh")),
+    Key([mod], "space", lazy.spawn(home + "/.config/rofi/launcher.sh")),
 
     Key([mod], "Home", lazy.spawn(myFile)),
-    Key([mod], "f", lazy.spawn(myBrowser))
+    Key([mod], "f", lazy.spawn(myBrowser)),
+    Key([mod], "Escape", lazy.spawn(home + "/.config/qtile/powermenu.sh"))
 
 ]
 
-group_names = [("DEV", {'layout': 'column'}),
-               ("WWW", {'layout': 'column'}),
-               ("SYS", {'layout': 'column'}),
-               ("DOC", {'layout': 'column'}),
-               ("VBOX", {'layout': 'column'}),
-               ("CHAT", {'layout': 'column'}),
-               ("VID", {'layout': 'column'}),
-               ("MUS", {'layout': 'column'}),
-               ("GFX", {'layout': 'column'})] 
+@hook.subscribe.startup_once
+def autostart():
+    subprocess.call([home + '/.config/qtile/autostart.sh'])
+
+group_names = [("DEV", {'layout': 'monadtall'}),
+               ("WWW", {'layout': 'monadtall'}),
+               ("SYS", {'layout': 'monadtall'}),
+               ("DOC", {'layout': 'monadtall'}),
+               ("VBOX", {'layout': 'monadtall'}),
+               ("CHAT", {'layout': 'monadtall'}),
+               ("VID", {'layout': 'monadtall'}),
+               ("MUS", {'layout': 'monadtall'}),
+               ("GFX", {'layout': 'monadtall'})] 
 
 groups = [Group(name, **kwargs) for name, kwargs in group_names]
 
@@ -80,20 +90,20 @@ for i, (name, kwargs) in enumerate(group_names, 1):
     keys.append(Key([mod], str(i), lazy.group[name].toscreen()))
     keys.append(Key([mod, "shift"], str(i), lazy.window.togroup(name)))
 
-layout_theme = {"border_width": 1,
-                "margin": 6,
-                "border_focus": "#d75f5f",
-                "border_normal": "1D2330"
-               }
+layout_defaults = dict(border_width = 1,
+                       margin= 6,
+                       border_focus = "#CBC3E3",
+                       border_normal = "#1D2330"
+                      )
 
 layouts = [
-    layout.Columns(border_focus_stack='#d75f5f'),
+    # layout.Columns(**layout_defaults),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
     # layout.Matrix(),
-    layout.MonadTall(),
+    layout.MonadTall(**layout_defaults),
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
@@ -103,19 +113,26 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font='sans',
-    fontsize=12,
+    font='FiraCode Nerd Font Mono',
+    fontsize=13,
     padding=3,
+    shadow=0.6,
 )
 extension_defaults = widget_defaults.copy()
+wlan_conf = dict(
+        interface = 'wlp3s0',
+        format = '{essid}',
+        update_interval = 1
+        )
 
 screens = [
     Screen(
         top=bar.Bar(
             [
                 widget.GroupBox(),
-                widget.WindowName(),
+                widget.Spacer(),
                 widget.Prompt(),
+                widget.Spacer(),
                 widget.CurrentLayout(),
                 widget.Chord(
                     chords_colors={
@@ -124,10 +141,12 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.Systray(),
-                widget.Clock(format='%Y-%m-%d %a %H:%M'),
+                widget.Wlan(**wlan_conf),
                 widget.QuickExit(),
+                widget.Clock(format='%Y-%m-%d %a %H:%M'),
             ],
             24,
+            background="#00000000"
         ),
     ),
 ]
