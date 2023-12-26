@@ -1,0 +1,23 @@
+# ignore all
+/*
+
+# unignore zshrc
+!.zshrc
+
+# unignore .config
+!.config/
+
+# ignore .DS_Store
+*/.DS_Store
+
+# unignore README
+!README.md
+
+# unignore .gitignore
+!.gitignore
+
+# ignore runtimes
+.config/helix/runtime
+
+# ignore tmux plugins
+.config/tmux/plugins
