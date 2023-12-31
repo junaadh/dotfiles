@@ -21,3 +21,6 @@
 
 # ignore tmux plugins
 .config/tmux/plugins
+
+# ignore nvim plugins
+.config/nvim/plugin

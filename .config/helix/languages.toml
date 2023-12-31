@@ -18,7 +18,9 @@ name = "c"
 scope = "source.c"
 auto-format = true
 comment-token = "//"
-indent = { tab-width = 2, unit = ' ' }
+file-types = ["c", "h"]
+indent = { tab-width = 2, unit = '  ' }
+language-servers = ["clangd"]
   
 [language-server.rust-analyzer.config.check]
 command = "clippy"

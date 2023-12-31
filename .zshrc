@@ -476,6 +476,10 @@ git_deploy() {
   git push
 }
 
+alias gadd='git add'
+alias gcommit='git commit -m'
+alias gpush='git push'
+
 ## brew alias
 
 alias search='brew search'
