@@ -1,27 +1,23 @@
 return {
-  lua_ls = {
-    Lua = {
-      telemetry = { enable = false },
-      diagnostics = {
-        globals = { "vim" },
-      },
-      workspace = {
-        -- make language server aware of runtime files
-        library = {
-          [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-          [vim.fn.stdpath("config") .. "/lua"] = true,
-        },
-      },
-    },
-  },
-  bashls = {
-    filetypes = { "sh", "zsh" },
-  },
-  vimls = {
-    filetypes = { "vim" },
-  },
-  tsserver = {},
+  asm_lsp = {},
+  bashls = {},
   clangd = {
     filetypes = { "c", "h" },
-  }
+  },
+  cssls = {},
+  eslint = {},
+  emmet_language_server = {},
+  html = {},
+  jdtls = {},
+  tsserver = {},
+  biome = {},
+  texlab = {},
+  lua_ls = {},
+  marksman = {},
+  rust_analyzer = {},
+  sqlls = {},
+  taplo = {},
+  tailwindcss = {},
+  typst_lsp = {},
+
 }
