@@ -1,4 +1,32 @@
 [[language]]
+name = "typst"
+scope = "source.typst"
+injection-regex = "^typ(st)?$"
+file-types = ["typ"]
+indent = { tab-width = 2, unit = "  " }
+comment-token = "/*"
+language-servers = [ "typst-lsp" ]
+roots = ["typst.toml"]
+text-width = 100
+rulers = [100]
+soft-wrap.wrap-at-text-width = true
+
+[language-server.typst-lsp]
+command = "typst-lsp"
+
+[typst.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'$' = '$'
+
+[[grammar]]
+name = "typst"
+source = { path = "/Users/junaadh/.local/typst" }
+
+[[language]]
 name = "java"
 scope = "source.java"
 auto-format = true
@@ -146,3 +174,14 @@ includeInlayParameterNameHintsWhenArgumentMatchesName = true
 includeInlayPropertyDeclarationTypeHints = true
 includeInlayVariableTypeHints = true
 
+[[language]]
+name = "latex"
+
+[language-server.texlab.config.build]
+onSave = true
+auxDirectory = "build"
+logDirectory = "build"
+pdfDirectory = "doc/pdf"
+
+[language-server.texlab.config.chktex]
+onEdit = true
