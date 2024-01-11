@@ -28,6 +28,11 @@ set.hidden = true
 set.errorbells = true
 set.swapfile = false
 set.backup = false
-set.undodir = vim.fn.expand("~/.vim/undodir")
 set.undofile = true
 set.backspace = "indent,eol,start"
+
+-- set cursor
+-- insert mode = bar
+-- normal mode = block
+-- visual mode = underline
+set.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,v-cr-o:hor20"

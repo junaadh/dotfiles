@@ -14,7 +14,7 @@ M.on_attach = function(_, bufnr)
   nmap("go", require("telescope.builtin").lsp_type_definitions, "Type Definition")
   -- nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
-  nmap("gl", vim.diagnostic.open_float, "Open Diagnostic Float")
+  nmap("gL", vim.diagnostic.open_float, "Open Diagnostic Float")
 
   nmap("K", vim.lsp.buf.hover, "Hover Documentation")
   nmap("gs", vim.lsp.buf.signature_help, "Signature Documentation")

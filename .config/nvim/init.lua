@@ -1,5 +1,6 @@
 require("conf")
 
-require("lazy").setup("plugins", opts)
+require("lazy").setup("plugins")
 
-vim.cmd.colorscheme "catppuccin"
+-- set colorscheme
+vim.cmd([[colorscheme catppuccin]])
