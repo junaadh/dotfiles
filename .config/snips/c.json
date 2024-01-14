@@ -10,7 +10,7 @@
     },
     {
       "name": "printf",
-      "body": "printf(\"%s\", #term1);\n"
+      "body": "printf(\"#term1\", #term2);\n"
     },
     {
       "name": "printfzu",
@@ -21,8 +21,8 @@
       "body": "printf(\"%s\\n\", #term1);\n"
     },
     {
-      "name": "fori",
-      "body": "for (int #term1 = 0; #term1 < #term2; ++#term1) {\n\t\n}\n"
+      "name": "for",
+      "body": "for (#term1 #term2 = 0; #term2 < #term3; ++#term2) {\n\t\n}\n"
     },
     {
       "name": "fors",
@@ -35,6 +35,10 @@
     {
       "name": "type",
       "body": "typedef #term1 #term2;\n"
+    },
+    {
+      "name": "initc",
+      "body": "#include <stdio.h>\n\nint main(void) {\n\treturn 0;\n}\n"
     }
   ]
 }
