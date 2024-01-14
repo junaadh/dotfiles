@@ -1,0 +1,12 @@
+{
+    "snippets": [
+        {
+            "name": "if",
+            "body": "if(%s) {\n\n}\n"
+        },
+        {
+            "name": "ifelse",
+            "body": "if(%s) {\n\n} else {\n\n}\n"
+        }
+    ]
+}
