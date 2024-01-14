@@ -39,6 +39,7 @@ name = "cpp"
 scope = "source.cpp"
 auto-format = true
 comment-token = "//"
+file-types = ["cpp", "h"]
 indent = { tab-width = 2, unit = ' ' }
 
 [[language]]
