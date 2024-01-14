@@ -1,0 +1,12 @@
+{
+  "snippets": [
+    {
+      "name": "usestate",
+      "body": "const [#term1, set#TERM1] = useState(#term2)\n"
+    },
+    {
+      "name": "rfc",
+      "body": "export default function #TERM1() {\n  return <></>\n}\n"
+    }
+  ]
+}

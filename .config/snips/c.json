@@ -1,12 +1,12 @@
 {
-    "snippets": [
-        {
-            "name": "if",
-            "body": "if(%s) {\n\n}\n"
-        },
-        {
-            "name": "ifelse",
-            "body": "if(%s) {\n\n} else {\n\n}\n"
-        }
-    ]
+  "snippets": [
+    {
+      "name": "if",
+      "body": "if(#term1) {\n\n}\n"
+    },
+    {
+      "name": "ifelse",
+      "body": "if(#term1) {\n\n} else {\n\n}\n"
+    }
+  ]
 }
