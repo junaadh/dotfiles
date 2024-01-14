@@ -2,11 +2,39 @@
   "snippets": [
     {
       "name": "if",
-      "body": "if(#term1) {\n\n}\n"
+      "body": "if(#term1) {\n\t\n}\n"
     },
     {
       "name": "ifelse",
-      "body": "if(#term1) {\n\n} else {\n\n}\n"
+      "body": "if(#term1) {\n\t\n} else {\n\t\n}\n"
+    },
+    {
+      "name": "printf",
+      "body": "printf(\"%s\", #term1);\n"
+    },
+    {
+      "name": "printfzu",
+      "body": "printf(\"%zu\\n\", #term1);\n"
+    },
+    {
+      "name": "printfn",
+      "body": "printf(\"%s\\n\", #term1);\n"
+    },
+    {
+      "name": "fori",
+      "body": "for (int #term1 = 0; #term1 < #term2; ++#term1) {\n\t\n}\n"
+    },
+    {
+      "name": "fors",
+      "body": "for (size_t #term1 = 0; #term1 < #term2; ++#term1) {\n\t\n}\n"
+    },
+    {
+      "name": "struct",
+      "body": "typedef struct {\n\t\n}\t#term1;\n"
+    },
+    {
+      "name": "type",
+      "body": "typedef #term1 #term2;\n"
     }
   ]
 }
