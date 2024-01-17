@@ -7,6 +7,10 @@
     {
       "name": "rfc",
       "body": "export default function #TERM1() {\n  return <></>\n}\n"
+    },
+    {
+      "name": "useeffect",
+      "body": "useEffect(() => {})\n"
     }
   ]
 }
