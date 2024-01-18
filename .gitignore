@@ -3,6 +3,7 @@
 
 # unignore zshrc
 !.zshrc
+!.zshenv
 
 # unignore .config
 !.config/
@@ -22,5 +23,5 @@
 # ignore tmux plugins
 .config/tmux/plugins
 
-# ignore nvim plugins
-.config/nvim/plugin
+# ignore zsh_history
+.config/zsh/.zsh_history  

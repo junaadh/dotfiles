@@ -1,2 +1,5 @@
 # all so files
 */*.so
+
+# runtimes
+runtimes/
