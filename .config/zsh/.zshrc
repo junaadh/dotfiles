@@ -1,5 +1,6 @@
 eval "$(starship init zsh)"
 
+fpath=("$ZDOTDIR/completions" $fpath)
 if type brew &>/dev/null
 then
 	FPATH="$(brew --prefix)/share/zsh-completions:$FPATH"
@@ -7,6 +8,8 @@ then
 	autoload -Uz compinit
 	compinit
 fi
+
+compdef _dev dev
 
 dev() {
 	local search_term="$1"
@@ -39,10 +42,3 @@ dev() {
 
 alias refresh="source $ZDOTDIR/.zshrc"
 alias cls="clear"
-
-# The following lines were added by compinstall
-zstyle :compinstall filename '/Users/junaadh/.config/zsh/.zshrc'
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall

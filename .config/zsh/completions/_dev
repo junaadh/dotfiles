@@ -1,24 +1,21 @@
-_dev() {
-	local -a dev_commands
-	dev_commands=(
-		"h: Open in Helix"
-		"c: Open in VSCode"
-	)
+#compdef dev
 
-	_arguments \
-	"1::->search_term" \
-	"2::->open" \
-	&& return 0
+local -a dev_commands
+dev_commands=(
+	"h: Open in Helix"
+	"c: Open in VSCode"
+)
 
-	case "$state" in
-		search_term)
-			_values "search_terms" $(find "$HOME/Developer" -type d -mindepth 2 -maxdepth 2 -exec basename {} \;) && return 0
-			;;
-		open)
-			_describe "dev_commands" dev_commands && return 0
-			;;
-	esac
-	return 0
-}
+_arguments \
+"1::->search_term" \
+"2::->open" \
+&& return
 
-_dev "$@"
+case "$state" in
+	(search_term)
+		_values "search_terms" $(find "$HOME/Developer" -type d -mindepth 2 -maxdepth 2 -exec basename {} \;) && return
+		;;
+	(open)
+		_describe "dev_commands" dev_commands && return
+		;;
+esac
