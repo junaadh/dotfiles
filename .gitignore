@@ -25,3 +25,6 @@
 
 # ignore zsh_history
 .config/zsh/.zsh_history  
+
+# ignore zsh sessions
+.config/zsh/.zsh_sessions/
