@@ -1,5 +1,5 @@
 function __dev_search_terms
-    for dir in (find "$HOME/Developer" -maxdepth 2 -mindepth 2 -exec basename {} \;)
+    for dir in (find "$HOME/Developer" -type d -maxdepth 2 -mindepth 2 -exec basename {} \;)
         echo $dir
     end
 end
@@ -10,4 +10,4 @@ function __dev_commands
 end
 
 complete -c dev -f -n "__fish_use_subcommand" -a "(__dev_search_terms)"
-complete -c dev -f -n "__fish_seen_subcommand_from dev_commands" -a "(__dev_commands)"
+complete -c dev -f -n "__fish_seen_subcommand_from dev_commads" -a "(__dev_commands)"

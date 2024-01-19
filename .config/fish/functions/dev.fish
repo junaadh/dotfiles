@@ -11,9 +11,9 @@ function dev
             cd $dirs[1]; or echo "ERROR: Unable to change directory to $dirs[1]"
 
             if test -n "$open"
-                if test "$open" = "hx"
+                if test "$open" = "$hx"
                     hx .
-                elif test "$open" = "code"
+                else if test "$open" = "$code"
                     code .
                 else
 					echo "ERROR: Unknown value for 'open': $open\nAccepted values are h: Helix, c: VSCode\n"

@@ -3,16 +3,20 @@ if status is-interactive
 end
 
 # set env variables
-set -x PATH /opt/homebrew/opt/binutils/bin $PATH
-set -x PATH /opt/homebrew//bin $PATH
-set -x PATH_TO_FX $HOME/.sdk/javafx-sdk-21.0.1/lib
-set -x JAVA_HOME /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home
+set -gx PATH /opt/homebrew/opt/binutils/bin $PATH
+set -gx PATH /opt/homebrew//bin $PATH
+set -gx PATH_TO_FX $HOME/.sdk/javafx-sdk-21.0.1/lib
+set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home
+set -gx FDOTS $HOME/.config/fish
+
+# remove the annoying greeting msg
+set fish_greeting
 
 # misc 
 alias ls="exa --icons"
-alias refresh="source ~/.config/fish/config.fish"
+alias refresh="source $FDOTS/config.fish"
 alias cls="clear"
-alias hxf="hx $HOME/.config/fish"
+alias hxf="hx $FDOTS"
 
 # git
 alias gs="git status"
