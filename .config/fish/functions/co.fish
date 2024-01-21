@@ -14,7 +14,7 @@ end
 function co
     set program $argv[1]
     set path "$HOME/.config"
-    set -l dirs (find "$path" -type d -name "$program*")
+    set -l dirs (find "$path" -type d -maxdepth 1 -mindepth 1 -name "$program*")
     set tmux_session "config"
     set session_exist (tmux has-session -t $tmux_session; echo $status)
     set session_max (tmux list-windows -t $tmux_session | wc -l)
