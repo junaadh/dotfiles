@@ -15,7 +15,7 @@ set -Ua fish_user_paths $HOME/.cargo/bin
 set fish_greeting
 
 # misc 
-alias ls="exa --icons"
+alias ls="eza --icons"
 alias refresh="source $FDOTS/config.fish"
 alias cls="clear"
 alias hxf="hx $FDOTS"
