@@ -11,6 +11,10 @@
     {
       "name": "useeffect",
       "body": "useEffect(() => {})\n"
+    },
+    {
+      "name": "test",
+      "body": "#Term1, #Term2, #term3, #TERM4, #term5"
     }
   ]
 }
