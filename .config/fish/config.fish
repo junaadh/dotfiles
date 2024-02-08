@@ -9,6 +9,7 @@ set -gx PATH $HOME/.local/bin $PATH
 set -gx PATH_TO_FX $HOME/.sdk/javafx-sdk-21.0.1/lib
 set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home
 set -gx FDOTS $HOME/.config/fish
+set -Ua fish_user_paths $HOME/.cargo/bin
 
 # remove the annoying greeting msg
 set fish_greeting
