@@ -26,6 +26,9 @@ function dev
 					tmux send-keys -t "$search_term" "clear; echo \"ERROR: Unknown value for 'open': $open\nAccepted values are h: Helix, c: VSCode\n\"" C-m
                 end
             end
+            # set -l github_url (git --git-dir=$dirs[1]/.git config --get remote.origin.url | cut -d':' -f2)
+            # echo "$search_term:$(echo $dirs[1] | cut -d'/' -f5):$(tmux capture-pane -p -t rise_code:$(tmux list-windows -t "rise_code" -F '#{window_index} #{window_name}' | grep hx | cut -d" " -f1) | grep sel | awk '{ print $2 }' | tail -n 1):www.github.com/$(git config --get remote.origin.url | cut -d':' -f2" | nc -U /tmp/dev_rpc
+            # echo "$search_term:$(echo $dirs[1] | cut -d'/' -f5):$(tmux capture-pane -p -t $search_term:$(tmux list-windows -t $search_term -F '#{window_index} #{window_name}' | grep hx | cut -d" " -f1) | grep sel | awk '{ print $2 }' | tail -n 1):https;//www.github.com/$github_url" | nc -U /tmp/dev_rpc
             tmux attach-session -t $search_term
         else
 			echo "ERROR: Project with name startin with $search_term not found in $path"

@@ -12,6 +12,9 @@ set -gx FDOTS $HOME/.config/fish
 set -Ua fish_user_paths $HOME/.cargo/bin
 set -gx BDT $HOME/Documents/Acadamics/sem3.5/BDT
 set -gx CCDE $HOME/Documents/Acadamics/sem3.5/CCDE
+set -gx clientid 1208484529510154260
+
+set -g fish_follow_symlinks 1
 
 # remove the annoying greeting msg
 set fish_greeting
@@ -36,4 +39,5 @@ alias clean="brew autoremove && brew cleanup"
 alias list="brew list"
 alias update="brew update && brew upgrade"
 
+~/Developer/rust/rise_code/scripts/rise_code_startup.sh
 starship init fish | source
