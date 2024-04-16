@@ -1,15 +1,15 @@
-[[language]]
-name = "typst"
-scope = "source.typst"
-injection-regex = "^typ(st)?$"
-file-types = ["typ"]
-indent = { tab-width = 2, unit = "  " }
-comment-token = "/*"
-language-servers = [ "typst-lsp" ]
-roots = ["typst.toml"]
-text-width = 100
-rulers = [100]
-soft-wrap.wrap-at-text-width = true
+# [[language]]
+# name = "typst"
+# scope = "source.typst"
+# injection-regex = "^typ(st)?$"
+# file-types = ["typ"]
+# indent = { tab-width = 2, unit = "  " }
+# # comment-token = "/*"
+# language-servers = [ "typst-lsp" ]
+# roots = ["typst.toml"]
+# text-width = 100
+# rulers = [100]
+# soft-wrap.wrap-at-text-width = true
 
 [language-server.typst-lsp]
 command = "typst-lsp"
@@ -27,26 +27,64 @@ name = "typst"
 source = { path = "/Users/junaadh/.local/typst" }
 
 [[language]]
+name = "markdown"
+language-servers = ["marksman", "mdpls"]
+
+[language-server.mdpls]
+command = "~/.cargo/bin/mdpls"
+config = { markdown.preview.auto = true }
+
+[[language]]
+name = "python"
+roots = ["pyproject.toml"]
+language-servers = ["pyright", "ruff"]
+indent = { tab-width = 4, unit = " " }
+auto-format = true
+
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+# config = { python = { analysis = { typeCheckingMode = "strict" } } }
+
+[language-server.ruff]
+command = "ruff-lsp"
+config = { settings = { run = "onSave" } }
+
+[[language]]
 name = "java"
 scope = "source.java"
 auto-format = true
 injection-regex = "java"
 roots = ["pom.xml"]
-comment-token = "//"
+# comment-token = "//"
 
 [[language]]
 name = "cpp"
 scope = "source.cpp"
 auto-format = true
-comment-token = "//"
+# comment-token = "//"
 file-types = ["cpp", "h"]
 indent = { tab-width = 2, unit = ' ' }
+
+[[language]]
+name = "rust"
+scope = "source.rust"
+auto-format = true
+# comment-token = "//"
+file-types = ["rs"]
+indent = { tab-width = 2, unit = ' ' }
+# language-servers = [ "rust-analyzer" ]
+language-servers = [ "rust-analyzer" ]#, "lsp-rs" ]
+
+[language-server.lsp-rs]
+# command = "/Users/junaadh/Developer/rust/lsp-rs/target/debug/lsp-rs"
+command = "lsp-rs"
 
 [[language]]
 name = "c"
 scope = "source.c"
 auto-format = true
-comment-token = "//"
+# comment-token = "//"
 file-types = ["c", "h"]
 indent = { tab-width = 2, unit = '  ' }
 language-servers = ["clangd"]
@@ -55,55 +93,117 @@ language-servers = ["clangd"]
 command = "clippy"
 
 [language-server.rust-analyzer.config]
-inlayHints.bindingModeHints.enable = false
+inlayHints.bindingModeHints.enable = true
 inlayHints.closingBraceHints.minLines = 10
 inlayHints.closureReturnTypeHints.enable = "with_block"
 inlayHints.discriminantHints.enable = "fieldless"
 inlayHints.lifetimeElisionHints.enable = "skip_trivial"
 inlayHints.typeHints.hideClosureInitialization = false
+procMacro = { ignored = { leptos_macro = ["server"] } }
 
 [[language]]
 name = "toml"
 formatter = { command = "taplo", args = ["fmt", "-"]}
 
+[language-server.biome]
+command = "biome"
+args = ["lsp-proxy"]
+
 [[language]]
 name = "typescript"
-language-servers = ["typescript-language-server", "tailwindcss-ls", "eslint", "emmet-ls"]
-formatter = { command = "npx", args = ["prettier", "--parser", "typescript"] }
+language-servers = [
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+  "eslint",
+  "tailwindcss-ls",
+  "emmet-ls",
+]
+formatter = { command = "biome", args = [
+  "format",
+  "--stdin-file-path",
+  "foo.ts",
+  "--indent-style=space",
+] }
 indent = { tab-width = 2, unit = " " }
 auto-format = true
 
 [[language]]
 name = "javascript"
-language-servers = ["typescript-language-server", "tailwindcss-ls", "eslint", "emmet-ls"]
-formatter = { command = "npx", args = ["prettier", "--parser", "typescript"] }
+language-servers = [
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+  "eslint",
+  "tailwindcss-ls",
+  "emmet-ls",
+]
+formatter = { command = "biome", args = [
+  "format",
+  "--stdin-file-path",
+  "foo.js",
+  "--indent-style=space",
+] }
 indent = { tab-width = 2, unit = " " }
 auto-format = true
 
 [[language]]
 name = "tsx"
-language-servers = ["typescript-language-server", "tailwindcss-ls", "eslint", "emmet-ls"]
-formatter = { command = "npx", args = ["prettier", "--parser", "typescript"] }
+language-servers = [
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+  "eslint",
+  "tailwindcss-ls",
+  "emmet-ls",
+]
+formatter = { command = "biome", args = [
+  "format",
+  "--stdin-file-path",
+  "foo.tsx",
+  "--indent-style=space",
+] }
 indent = { tab-width = 2, unit = " " }
 auto-format = true
 
 [[language]]
 name = "jsx"
-language-servers = ["typescript-language-server", "tailwindcss-ls", "eslint", "emmet-ls"]
-formatter = { command = "npx", args = ["prettier", "--parser", "typescript"] }
+language-servers = [
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+  "eslint",
+  "tailwindcss-ls",
+  "emmet-ls",
+]
+formatter = { command = "biome", args = [
+  "format",
+  "--stdin-file-path",
+  "foo.jsx",
+  "--indent-style=space",
+] }
 indent = { tab-width = 2, unit = " " }
 auto-format = true
 
 [[language]]
 name = "json"
-language-servers = ["vscode-json-language-server"]
-formatter = { command = "npx", args = ["prettier", "--parser", "json"] }
+language-servers = [
+  { name = "vscode-json-language-server", except-features = [
+    "format",
+  ] },
+]
+formatter = { command = "biome", args = [
+  "format",
+  "--stdin-file-path",
+  "foo.json",
+  "--indent-style=space",
+] }
 indent = { tab-width = 2, unit = " " }
 auto-format = true
 
 [language-server.vscode-json-language-server.config]
-json = { validate = { enable = true }, format = { enable = true } }
-provideFormatter = true
+json = { validate = { enable = true } }
+provideFormatter = false
 
 [language-server.vscode-css-language-server.config]
 css = { validate = { enable = true } }
@@ -141,7 +241,7 @@ useESLintClass = false
 validate = "on"
 codeAction = { disableRuleComment = { enable = true, location = "separateLine" }, showDocumentation = { enable = true } }
 codeActionOnSave = { mode = "all" }
-experimental = { }
+experimental = {}
 problems = { shortenToSingleLine = false }
 workingDirectory = { mode = "auto" }
 
@@ -176,13 +276,5 @@ includeInlayPropertyDeclarationTypeHints = true
 includeInlayVariableTypeHints = true
 
 [[language]]
-name = "latex"
-
-[language-server.texlab.config.build]
-onSave = true
-auxDirectory = "build"
-logDirectory = "build"
-pdfDirectory = "doc/pdf"
-
-[language-server.texlab.config.chktex]
-onEdit = true
+name = "ocaml"
+formatter = { command = "ocamlformat", args = [ "-", "--impl", "--enable-outside-detected-project" ] }
