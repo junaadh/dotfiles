@@ -1,0 +1,6 @@
+inherits = "ayu_evolve"
+
+"ui.background" = {}
+"ui.statusline" = {}
+"ui.linenr" = { fg = "gray" }
+"ui.popup" = { bg = "dark_gray" }
