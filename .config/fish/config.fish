@@ -44,10 +44,10 @@ alias clean="brew autoremove && brew cleanup"
 alias list="brew list"
 alias update="brew update && brew upgrade"
 
-alias awk="gawk"
+# alias awk="gawk"
 
 starship init fish | source
-~/.cargo/rise_code/launcher.sh
+# ~/.cargo/rise_code/launcher.sh
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
