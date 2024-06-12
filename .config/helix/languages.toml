@@ -1,31 +1,3 @@
-# [[language]]
-# name = "typst"
-# scope = "source.typst"
-# injection-regex = "^typ(st)?$"
-# file-types = ["typ"]
-# indent = { tab-width = 2, unit = "  " }
-# # comment-token = "/*"
-# language-servers = [ "typst-lsp" ]
-# roots = ["typst.toml"]
-# text-width = 100
-# rulers = [100]
-# soft-wrap.wrap-at-text-width = true
-
-[language-server.typst-lsp]
-command = "typst-lsp"
-
-[typst.auto-pairs]
-'(' = ')'
-'{' = '}'
-'[' = ']'
-'"' = '"'
-'`' = '`'
-'$' = '$'
-
-[[grammar]]
-name = "typst"
-source = { path = "/Users/junaadh/.local/typst" }
-
 [[language]]
 name = "markdown"
 language-servers = ["marksman", "mdpls"]
@@ -50,6 +22,15 @@ args = ["--stdio"]
 command = "ruff-lsp"
 config = { settings = { run = "onSave" } }
 
+[language-server.pyright.config]
+venvPath = "."
+venv = "./venv"
+python = { analysis = { typeCheckingMode = "strict" } }
+
+[[language]]
+name = "bash"
+file-types = ["sh"]
+
 [[language]]
 name = "java"
 scope = "source.java"
@@ -72,13 +53,12 @@ scope = "source.rust"
 auto-format = true
 # comment-token = "//"
 file-types = ["rs"]
-indent = { tab-width = 2, unit = ' ' }
-# language-servers = [ "rust-analyzer" ]
+indent = { tab-width = 4, unit = '    ' }
 language-servers = [ "rust-analyzer" ]#, "lsp-rs" ]
 
-[language-server.lsp-rs]
+# [language-server.lsp-rs]
 # command = "/Users/junaadh/Developer/rust/lsp-rs/target/debug/lsp-rs"
-command = "lsp-rs"
+# command = "lsp-rs"
 
 [[language]]
 name = "c"
@@ -105,9 +85,8 @@ procMacro = { ignored = { leptos_macro = ["server"] } }
 name = "toml"
 formatter = { command = "taplo", args = ["fmt", "-"]}
 
-[language-server.biome]
-command = "biome"
-args = ["lsp-proxy"]
+[language-server]
+biome = { command = "biome", args = ["lsp-proxy"] }
 
 [[language]]
 name = "typescript"
@@ -125,7 +104,7 @@ formatter = { command = "biome", args = [
   "foo.ts",
   "--indent-style=space",
 ] }
-indent = { tab-width = 2, unit = " " }
+indent = { tab-width = 2, unit = "  " }
 auto-format = true
 
 [[language]]
@@ -163,7 +142,7 @@ formatter = { command = "biome", args = [
   "foo.tsx",
   "--indent-style=space",
 ] }
-indent = { tab-width = 2, unit = " " }
+indent = { tab-width = 2, unit = "  " }
 auto-format = true
 
 [[language]]
@@ -222,12 +201,12 @@ formatter = { command = "npx", args = ["prettier", "--parser", "css"] }
 language-servers = ["vscode-css-language-server", "tailwindcss-ls", "emmet-ls"]
 
 [language-server.emmet-ls]
+command = "emmet-ls"
 args = ["--stdio"]
-command = "emmet-language-server"
 
 [language-server.eslint]
-args = ["--stdio"]
 command = "vscode-eslint-language-server"
+args = ["--stdio"]
 
 [language-server.eslint.config]
 format = true
@@ -274,7 +253,3 @@ includeInlayParameterNameHints = "all"
 includeInlayParameterNameHintsWhenArgumentMatchesName = true
 includeInlayPropertyDeclarationTypeHints = true
 includeInlayVariableTypeHints = true
-
-[[language]]
-name = "ocaml"
-formatter = { command = "ocamlformat", args = [ "-", "--impl", "--enable-outside-detected-project" ] }
