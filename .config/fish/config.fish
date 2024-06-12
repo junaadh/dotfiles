@@ -44,13 +44,28 @@ alias clean="brew autoremove && brew cleanup"
 alias list="brew list"
 alias update="brew update && brew upgrade"
 
+alias isend="osascript -e 'tell application \"Messages\" to send \"$argv[1]\" to buddy \"$argv[2]\"'"
+
 # alias awk="gawk"
 
 starship init fish | source
-# ~/.cargo/rise_code/launcher.sh
+~/.cargo/rise_code/launcher.sh
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
- source /Users/junaadh/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+source /Users/junaadh/.opam/opam-init/init.fish >/dev/null 2>/dev/null; or true
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /opt/homebrew/Caskroom/miniconda/base/bin/conda
+    eval /opt/homebrew/Caskroom/miniconda/base/bin/conda "shell.fish" hook $argv | source
+else
+    if test -f "/opt/homebrew/Caskroom/miniconda/base/etc/fish/conf.d/conda.fish"
+        . "/opt/homebrew/Caskroom/miniconda/base/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH /opt/homebrew/Caskroom/miniconda/base/bin $PATH
+    end
+end
+# <<< conda initialize <<<
