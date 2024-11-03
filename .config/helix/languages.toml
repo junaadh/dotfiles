@@ -16,11 +16,11 @@ auto-format = true
 [language-server.pyright]
 command = "pyright-langserver"
 args = ["--stdio"]
-# config = { python = { analysis = { typeCheckingMode = "strict" } } }
 
 [language-server.ruff]
-command = "ruff-lsp"
-config = { settings = { run = "onSave" } }
+command = "ruff"
+args = ["server"]
+environment = { "RUFF_TRACE" = "messages" }
 
 [language-server.pyright.config]
 venvPath = "."
@@ -253,3 +253,8 @@ includeInlayParameterNameHints = "all"
 includeInlayParameterNameHintsWhenArgumentMatchesName = true
 includeInlayPropertyDeclarationTypeHints = true
 includeInlayVariableTypeHints = true
+
+[[language]]
+name = "swift"
+auto-format = true
+formatter = { command = "swift format" }
