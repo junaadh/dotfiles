@@ -6,16 +6,10 @@ end
 set -gx PATH /opt/homebrew/opt/binutils/bin $PATH
 set -gx PATH /opt/homebrew//bin $PATH
 set -gx PATH $HOME/.local/bin $PATH
-set -gx PATH $HOME/Library/Python/3.9/bin $PATH
-set -gx PATH_TO_FX $HOME/.sdk/javafx-sdk-21.0.1/lib
-# set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home
 set -gx FDOTS $HOME/.config/fish
 set -Ua fish_user_paths $HOME/.cargo/bin
-set -gx BDT $HOME/Documents/Acadamics/sem3.5/BDT
-set -gx CCDE $HOME/Documents/Acadamics/sem3.5/CCDE
 set -gx clientid 1208484529510154260
 set -gx DISCORD_APP_ID 996864734957670452
-set -gx PYSPARK_PYTHON /opt/homebrew//bin/python3
 
 set -g fish_follow_symlinks 1
 
@@ -49,7 +43,6 @@ alias isend="osascript -e 'tell application \"Messages\" to send \"$argv[1]\" to
 # alias awk="gawk"
 
 starship init fish | source
-~/.cargo/rise_code/launcher.sh
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
@@ -69,3 +62,5 @@ else
     end
 end
 # <<< conda initialize <<<
+uv generate-shell-completion fish | source
+uvx --generate-shell-completion fish | source
