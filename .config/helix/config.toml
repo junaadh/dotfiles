@@ -42,8 +42,5 @@ render = true
 # right = ["version-control"]
 
 [keys.normal]
-"C-S-down" = [ "extend_to_line_bounds", "delete_selection", "paste_after" ]
-"C-S-up" = [ "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before" ]
-
-[keys.normal.space]
-B = ["yank_main_selection_to_clipboard", ":run-shell-command tmux save-buffer - | pbcopy"]
+C-S-down = ["extend_to_line_bounds","delete_selection","paste_after"]
+C-S-up = ["extend_to_line_bounds","delete_selection","move_line_up","paste_before" ]
