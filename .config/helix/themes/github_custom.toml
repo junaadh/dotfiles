@@ -1,0 +1,6 @@
+inherits = "github_dark"
+
+"ui.background" = {}
+"ui.virtual.inlay-hint" = { bg = "scale.gray.6", modifiers = ["dim"] }
+"ui.bufferline.background" = {}
+"ui.bufferline.active" = {}

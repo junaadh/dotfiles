@@ -191,6 +191,13 @@ plugins {
     session-manager { path "session-manager"; }
 }
 
+ui {
+    pane_frames {
+        rounded_corners true
+        hide_session_name true
+    }
+}
+
 // Choose what to do when zellij receives SIGTERM, SIGINT, SIGQUIT or SIGHUP
 // eg. when terminal window with an active zellij session is closed
 // Options:
@@ -220,7 +227,7 @@ simplified_ui true
 //   - true (default)
 //   - false
 //
-pane_frames false
+pane_frames true
 
 // Toggle between having Zellij lay out panes according to a predefined set of layouts whenever possible
 // Options:
@@ -240,7 +247,7 @@ auto_layout true
 // Options:
 //   - true
 //   - false (default)
-// serialize_pane_viewport true
+serialize_pane_viewport true
 
 // Scrollback lines to serialize along with the pane viewport when serializing sessions, 0
 // defaults to the scrollback size. If this number is higher than the scrollback size, it will
@@ -299,8 +306,8 @@ themes {
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-// theme "catppuccin-macchiato"
-theme "gruvbox_dark"
+theme "catppuccin-macchiato"
+// theme "gruvbox_dark"
 
 // The name of the default layout to load on startup
 // Default: "default"

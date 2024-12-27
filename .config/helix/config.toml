@@ -1,5 +1,5 @@
 # theme = "gruvbox_dark_hard"
-theme = "ayu_evolve"
+theme = "github_custom"
 
 [editor]
 line-number = 'relative'
@@ -39,7 +39,7 @@ select = "underline"
 render = true
 
 [editor.statusline]
-# right = ["version-control"]
+right = ["diagnostics", "version-control", "selections", "position", "file-type"]
 
 [keys.normal]
 C-S-down = ["extend_to_line_bounds","delete_selection","paste_after"]

@@ -44,8 +44,8 @@ name = "cpp"
 scope = "source.cpp"
 auto-format = true
 # comment-token = "//"
-file-types = ["cpp", "h"]
-indent = { tab-width = 2, unit = ' ' }
+file-types = ["cpp", "hh"]
+indent = { tab-width = 2, unit = '  ' }
 
 [[language]]
 name = "rust"
@@ -258,3 +258,21 @@ includeInlayVariableTypeHints = true
 name = "swift"
 auto-format = true
 formatter = { command = "swift format" }
+
+[[language]]
+name = "zig"
+auto-format = true
+formatter = { command = "zig fmt --stdin" }
+
+[[language]]
+name = "haskell"
+auto-format = true
+
+[[language]]
+name = "ocaml"
+auto-format = false
+formatter = { command = "ocamlformat", args = [
+  "-",
+  "--impl",
+  "--enable-outside-detected-project", # Enable only if you want to format files outside of projects
+] }

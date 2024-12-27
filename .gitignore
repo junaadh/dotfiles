@@ -4,6 +4,7 @@
 # unignore zshrc
 !.zshrc
 !.zshenv
+!.zprofile
 
 # unignore .config
 !.config/
@@ -16,6 +17,9 @@
 
 # unignore .gitignore
 !.gitignore
+
+# unignore hushlogin
+!.hushlogin
 
 # ignore runtimes
 .config/helix/runtime

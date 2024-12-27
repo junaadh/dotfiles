@@ -1,0 +1,175 @@
+# Add custom completion path
+fpath=("$ZDOTDIR/completions" $fpath)
+
+# Initialize Starship prompt and FZF
+eval "$(starship init zsh)"
+eval "$(fzf --zsh)"
+
+# Add Homebrew completions if Homebrew is installed
+if type brew &>/dev/null; then
+    fpath=("$(brew --prefix)/share/zsh-completions" $fpath)
+fi
+
+# Initialize Zsh completion system
+autoload -Uz compinit
+compinit
+
+# Arrays to track environment variables and aliases
+local_env_vars=()
+local_env_aliases=()
+
+# Function to load .env or .zshrc in the current directory
+load_local_env() {
+    # Cleanup previously loaded directory-specific environment settings
+    cleanup_local_env
+
+    local local_env_file
+    if [[ -f .env ]]; then
+        local_env_file=".env"
+    elif [[ -f .zshrc ]]; then
+        local_env_file=".zshrc"
+    else
+        return
+    fi
+
+    # Source the environment file and track aliases/variables
+    while IFS= read -r line; do
+        # Check if the line defines an alias or environment variable
+        if [[ $line == alias* ]]; then
+            eval "$line"
+            local_env_aliases+=("${line#alias }")
+        elif [[ $line == *'='* ]]; then
+            eval "$line"
+            local_env_vars+=("${line%%=*}")
+        fi
+    done < "$local_env_file"
+}
+
+# Function to unset local aliases and variables when leaving the directory
+cleanup_local_env() {
+    for alias_name in "${local_env_aliases[@]}"; do
+        unalias "${alias_name%%=*}" 2>/dev/null
+    done
+    for var_name in "${local_env_vars[@]}"; do
+        unset "$var_name" 2>/dev/null
+    done
+    # Clear the arrays after cleanup
+    local_env_aliases=()
+    local_env_vars=()
+}
+
+# Automatically load .env or .zshrc when changing directories
+autoload -Uz add-zsh-hook
+add-zsh-hook chpwd load_local_env
+
+# Load .env or .zshrc on the first shell start
+load_local_env
+
+# Function to open projects with Zellij
+dev() {
+    local search_term="$1"
+    local dev="$HOME/Developer"
+    local dirs=($(find "$dev" -type d -maxdepth 2 -mindepth 2 -iname "$search_term*"))
+
+    if [ -n "$search_term" ]; then
+        if [ ${#dirs[@]} -gt 0 ]; then
+            if zellij ls 2> /dev/null | grep -q "$search_term"; then
+                zellij a "$search_term"
+            else
+                zellij options --session-name "$search_term" --default-cwd "${dirs[1]}"
+            fi
+        else
+            echo "Error: Project with name starting with '$search_term' not found in '$dev'"
+        fi
+    else
+        echo "Error: Search term not provided"
+    fi
+}
+
+# Completion function for dev
+_dev_completion() {
+    local -a dev_commands
+    dev_commands=(
+        "h:Open in Helix"
+        "c:Open with VS Code"
+    )
+
+    _arguments \
+        "1: :->search_term" \
+        "2: :->open" \
+        && return
+
+    case "$state" in
+        search_term)
+            _values "search_terms" $(find "$HOME/Developer" -maxdepth 2 -mindepth 2 -type d -exec basename {} \;) && return
+            ;;
+        open)
+            _describe "dev command" dev_commands && return
+            ;;
+    esac
+}
+
+# Enable completion for the dev function
+compdef _dev_completion dev
+
+# Aliases
+alias refresh="source $ZDOTDIR/.zshrc"
+alias cls="clear"
+alias ls="eza --icons"
+alias tree="eza --icons -la -T --level 3 --git-ignore"
+
+# Git Aliases
+alias gs="git status"
+alias gadd="git add"
+alias gcomm="git commit -m"
+alias gpush="git push"
+
+# Homebrew Aliases
+alias install="brew install"
+alias search="brew search"
+alias uninstall="brew uninstall"
+alias clean="brew autoremove && brew cleanup"
+alias list="brew list"
+alias update="brew update && brew upgrade"
+
+# Zinit Installer
+if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
+    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
+        print -P "%F{33} %F{34}Installation successful.%f%b" || \
+        print -P "%F{160} The clone has failed.%f%b"
+fi
+
+# Load Zinit and set up annexes and plugins
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
+
+zinit ice wait lucid
+zinit load Aloxaf/fzf-tab
+zinit light zsh-users/zsh-syntax-highlighting
+
+zinit snippet OMZ::plugins/git/git.plugin.zsh
+zinit load zsh-users/zsh-history-substring-search
+zinit ice wait atload_history_substring_search_config
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+# Zstyle Configuration
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza $realpath -1 --color=always --icons=always --group-directories-first'
+zstyle ':fzf-tab:*' switch-group '<' '>'
+zstyle ':fzf-tab:*' popup-min-size 50 8
+zstyle ':fzf-tab:complete:diff:*' popup-min-size 80 12
+
+# Additional completions
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
