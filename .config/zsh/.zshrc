@@ -1,3 +1,7 @@
+# Initialize Starship prompt and FZF
+eval "$(starship init zsh)"
+eval "$(fzf --zsh)"
+
 # add custom completions path
 fpath=("$ZDOTDIR/completions" $fpath)
 
