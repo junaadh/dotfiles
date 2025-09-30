@@ -1,0 +1,8 @@
+BasedOnStyle: LLVM
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+BraceWrapping:
+  AfterEnum: false
+  AfterStruct: false
+  AfterUnion: false

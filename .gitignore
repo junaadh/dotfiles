@@ -32,3 +32,18 @@
 
 # ignore zsh sessions
 .config/zsh/.zsh_sessions/
+
+# unignore nushell config
+!Library/
+Library/*
+
+!Library/Application Support/
+Library/Application Support/*
+
+!Library/Application Support/nushell/
+Library/Application Support/nushell/*
+
+!Library/Application Support/nushell/**
+
+# rustfmt config
+!.rustfmt.toml

@@ -116,3 +116,24 @@ _dev() {
 
 # enable completions
 compdef _dev dev
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun completions
+[ -s "/Users/junaadh/.bun/_bun" ] && source "/Users/junaadh/.bun/_bun"
+
+export PATH="$HOME/.local/flutter/bin:$PATH"
+eval $(/opt/homebrew/bin/brew shellenv)
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+
+alias python=python3
+export PATH="$HOME/opt/toolchains/arm-gnu-toolchain-14.2.rel1-darwin-arm64-arm-none-eabi/bin:$PATH"
+export RED_HOME=/Users/junaadh/Developer/rust/red
+export PATH="$RED_HOME/target/release:$PATH"
+
+export PATH="$PATH":"$HOME/.pub-cache/bin"

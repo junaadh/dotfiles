@@ -6,10 +6,12 @@ background-opacity = 0.7
 background-blur-radius = 20
 macos-titlebar-style = "hidden"
 
-macos-icon = "custom-style"
-macos-icon-frame = "beige"
-macos-icon-ghost-color = #AABBCC
-macos-icon-screen-color = #AABBCC
+# macos-icon = "custom-style"
+# macos-icon-frame = "beige"
+# macos-icon-ghost-color = #AABBCC
+# macos-icon-screen-color = #AABBCC
 
 font-family = "Symbols Nerd Font Mono"
 font-family = "FiraCode Nerd Font Mono"
+
+auto-update-channel = "tip"

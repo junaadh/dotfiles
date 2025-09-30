@@ -3,7 +3,7 @@ name = "markdown"
 language-servers = ["marksman", "mdpls"]
 
 [language-server.mdpls]
-command = "~/.cargo/bin/mdpls"
+command = "mdpls"
 config = { markdown.preview.auto = true }
 
 [[language]]
@@ -51,24 +51,24 @@ indent = { tab-width = 2, unit = '  ' }
 name = "rust"
 scope = "source.rust"
 auto-format = true
-# comment-token = "//"
 file-types = ["rs"]
 indent = { tab-width = 4, unit = '    ' }
-language-servers = [ "rust-analyzer" ]#, "lsp-rs" ]
-
-# [language-server.lsp-rs]
-# command = "/Users/junaadh/Developer/rust/lsp-rs/target/debug/lsp-rs"
-# command = "lsp-rs"
+language-servers = [ "rust-analyzer" ]
 
 [[language]]
 name = "c"
 scope = "source.c"
-auto-format = true
-# comment-token = "//"
 file-types = ["c", "h"]
-indent = { tab-width = 2, unit = '  ' }
-language-servers = ["clangd"]
-  
+language-servers = [
+  "clangd"
+]
+auto-format = true
+formatter = { command = "clang-format", args = ["--assume-filename=.c", "--style=file"] }
+
+[language-server.clangd]
+command = "clangd"
+args = ["--fallback-style=-std=c17 -I./src"] 
+
 [language-server.rust-analyzer.config.check]
 command = "clippy"
 

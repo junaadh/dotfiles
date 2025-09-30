@@ -1,0 +1,1 @@
+export alias cls = clear

@@ -1,0 +1,239 @@
+mv `Library/Application Support/nushell/*` ~/.config/nushell/
+cls
+clear
+hx ~/.config/nushell/
+clear
+help config
+help config nu
+help config nu -d
+help config -d
+help config env
+config env
+config login
+config nu 
+config nu -d
+config nu
+config env -d
+open ~/.config/nushell/config.nu
+hx ~/.config/nushell/
+cls
+exit
+cls
+clear
+$nu
+cls
+clear
+hx ~/.gitignore
+hx .
+rm -r .config/nushell
+c;s
+clear
+hx .
+cls
+clear
+hx .
+cls
+git status
+hx .
+cls
+clear
+hx .
+ls -la
+q
+clear
+ls Library/
+ls `Library/Application Support/`
+ls `Library/Application Support/nushell/`<\n><\n>q<\n><\n>``
+ls `Library/Application Support/nushell/`
+^open Library/
+hx ~/.gitignore
+hx .
+hx `Library/Application Support/nushell<\n>`
+hx `Library/Application Support/`q
+hx .
+git status
+hx .
+cls
+clear
+git status
+hx .
+git check-ignore
+git check-ignore -v `Library/Application Support/nushell`
+git check-ignore -v `Library/Application Support/`
+git check-ignore -v Library/
+hx .
+git check-ignore -v `Library/Application Support/nushell`
+hx .
+clear
+git staus
+git status
+config env
+config nu
+config flatten 
+config nu --doc | nu-highlight | less -R
+config flatten 
+$env.config
+hx .
+junaadh
+exit
+config nu
+which rustc 
+clea
+clear
+config nu
+touch `Library/Application Support/nushell/`
+touch `Library/Application Support/nushell/fns.nu`
+config nu --doc | nu-highlight | less -R
+$nu.config-path
+$nu
+hx .
+refresh
+exit
+conf create aliases.nu
+config nu
+hx .
+exit
+help "conf create"
+hx .
+exit
+help conf create 
+clear
+conf create aliases.nu
+hx .
+exit
+hx .
+cls
+clear
+refresh
+exit
+refresh
+which refresh
+hx .
+cls
+exot
+exit
+cls
+refresh
+hx .
+ref
+^source
+source
+clear
+cls
+config nu
+source $nu.config-path
+confgig nu
+config nu
+source $nu.config-path
+which dev
+exit
+man dev
+help dev
+dev he
+hx .
+source $nu.config-path
+help dev
+dev_completions he
+dev_completions hel
+hx .
+dev_completions hel
+source $nu.config-path
+dev_completions hel
+hx .
+dev_completions hel
+hx .
+source $nu.config-path
+dev_completions hel
+dev hell
+hx .
+source $nu.config-path
+dev hell
+hx .
+source $nu.config-path
+dev hell
+hx .
+exit
+dev hell
+exit
+dev hell
+$env.NU_LOG_FORMAT = "log"
+dev hell
+$env.NU_LOG_DATE_FORMAT = ""
+dev hell
+exit
+hx .
+dev hell
+source $nu.config-path
+dev hell
+$env.NU_LOG_FORMAT?
+dev h
+exit
+hx .
+dev h
+source $nu.config-path
+dev h
+hx .
+source $nu.config-path
+dev h
+exit
+fg
+bg
+exit
+dev h
+dev hello
+dev zion
+dev zi
+dev rion
+hx .
+dev rion
+dev zi
+hx .
+exit
+dev zi
+dev z0os
+hx .
+exit
+dev
+hx .
+exit
+dev
+hx .
+cls
+exit
+dev
+dev hello
+cls
+hx .
+cls
+exit
+dev
+pwd
+dev
+dev hello
+hx .
+cls
+exit
+dev 
+dev hello
+cls
+help dev
+hx .
+cd -
+cd
+cls
+hx .
+exit
+cls
+dev
+exit
+cls
+help dev
+dev -h
+dev ziox
+cd
+cls
+hx .
+cls
+curl -fsSL https://ollama.com/install.sh | sh
+hx .
+exit

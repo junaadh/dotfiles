@@ -8,6 +8,8 @@ auto-completion = true
 auto-format = true
 auto-save = true
 end-of-line-diagnostics = "hint"
+# mouse = false
+text-width = 70
 
 [editor.inline-diagnostics]
 cursor-line = "error"
